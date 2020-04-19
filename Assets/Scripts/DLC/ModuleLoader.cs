@@ -1,17 +1,20 @@
 ﻿using Photon.Pun;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using TMPro;
 
 public class ModuleLoader : MonoBehaviour
 {
     [SerializeField]
+    private Camera sceneCamera;
+    [SerializeField]
+    private TextMeshProUGUI loadingText;
+    [SerializeField]
     private GameObject _prefab;
     private void Start()
     {
-        const string url = "http://192.168.1.10:3001/module";
+        const string url = "https://api.vr.chipp.wtf/module";
         // hardcoded module name
         StartCoroutine(PostModule(url, "roomwsp"));
     }
@@ -48,8 +51,10 @@ public class ModuleLoader : MonoBehaviour
             Debug.Log(((PhotonNetwork.LocalPlayer.ActorNumber - 1) % 4) + 1);
             Debug.Log("reeeeeeeee" + spawnPoints.position);
             MasterManager.NetworkInstantiate(_prefab, spawnPoints.Find($"S{((PhotonNetwork.LocalPlayer.ActorNumber - 1) % 4) + 1}").position, Quaternion.identity);
-            //disable main camera
-            Camera.main.gameObject.SetActive(false);
+            //disable scene camera
+            sceneCamera.enabled = false;
+            sceneCamera.gameObject.SetActive(false);
+            loadingText.gameObject.SetActive(false);
         }
     }
 

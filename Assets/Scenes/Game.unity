@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 1553285905}
   - component: {fileID: 1553285904}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LoadingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Loading ...
+  m_text: Downloading assets...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -554,10 +554,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1553285904}
-    characterCount: 11
+    characterCount: 21
     spriteCount: 0
     spaceCount: 1
-    wordCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -741,6 +741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1352834625fc3d043ae9902874211733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneCamera: {fileID: 1683607062}
+  loadingText: {fileID: 1553285904}
   _prefab: {fileID: 7925460908679946223, guid: c67f96aca1518044796199cdf99a1fed, type: 3}
 --- !u!4 &2389870346130619926
 Transform:

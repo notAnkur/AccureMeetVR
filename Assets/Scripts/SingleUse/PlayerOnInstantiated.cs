@@ -8,10 +8,6 @@ public class PlayerOnInstantiated : MonoBehaviourPun
     private void Start()
     {
         // if player is not local player disable the camera and reticle pointer
-        //if(PhotonNetwork.LocalPlayer.IsLocal)
-        //{
-            
-        //}
         if(photonView.IsMine)
         {
             for (int i = 0; i < componentsToEnable.Length; i++)
