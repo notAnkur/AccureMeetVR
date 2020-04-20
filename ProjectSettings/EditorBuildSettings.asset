@@ -11,10 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms.unity
     guid: ad1b4b32b01a144428b785b3fadbebe2
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 18f6ba0b07abeab48ad0001160e2c5b9
+  - enabled: 0
+    path: Assets/GoogleVR/Beta/Demos/Scenes/HelloMR.unity
+    guid: abadaf21babd44e5998c8ed818bb7650
   - enabled: 0
     path: Assets/Scenes/MeetingRoom.unity
     guid: 70da11e76be5cd04d9424f44c2940239
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 18f6ba0b07abeab48ad0001160e2c5b9
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fbb265d1cc12ddd4f8f255a16073eca5,
+      type: 2}
