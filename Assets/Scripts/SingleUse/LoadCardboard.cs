@@ -7,7 +7,8 @@ public class LoadCardboard : MonoBehaviour
 {
     void Start()
     {
-        StartCoroutine(LoadDevice("cardboard"));
+        // moved this to PlayerOnInstantiated.cs
+        //StartCoroutine(LoadDevice("cardboard"));
     }
 
     IEnumerator LoadDevice(string newDevice)
